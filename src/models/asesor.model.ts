@@ -29,7 +29,7 @@ export class Asesor extends Entity {
 
   @property({
     type: 'string',
-    default: pendiente de respuesta,
+    default: "pendiente de respuesta",
   })
   estado?: string;
 
