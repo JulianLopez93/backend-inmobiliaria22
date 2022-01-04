@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'mongodb',
   connector: 'mongodb',
-  url: '',
-  host: 'localhost',
-  port: 27017,
+  url: 'mongodb+srv://Prog_Web:YOcrDMgqJpy20YZJ@clusterprogweb.e0kff.mongodb.net/inmobiliaria-seguridad?retryWrites=true&w=majority',
+  host: '',
+  port: 0,
   user: '',
   password: '',
-  database: 'inmobiliaria-seguridad',
+  database: '',
   useNewUrlParser: true
 };
 

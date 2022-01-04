@@ -1,6 +1,18 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, model, property} from '@loopback/repository';
+import {Inmueble} from './inmueble.model';
 
-@model()
+@model({
+  settings: {
+    foreignKeys: {
+      fk_inmueble_id: {
+        name: 'fk_inmueble_id',
+        entity: 'inmueble',
+        entityKey: 'id',
+        foreignKey: 'inmuebleId',
+      },
+    },
+  },
+})
 export class Imagen extends Entity {
   @property({
     type: 'number',
@@ -15,6 +27,8 @@ export class Imagen extends Entity {
   })
   nombre: string;
 
+  @belongsTo(() => Inmueble)
+  inmuebleId: number;
 
   constructor(data?: Partial<Imagen>) {
     super(data);
